@@ -29,6 +29,7 @@
 *.dylib
 
 # Executables
+src/executavel
 *.exe
 *.out
 *.app
