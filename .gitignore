@@ -30,6 +30,8 @@
 
 # Executables
 src/executavel
+src/main
+src/testeC
 *.exe
 *.out
 *.app
