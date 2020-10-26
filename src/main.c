@@ -2,7 +2,7 @@
 
 int main (void) {
   char sexo;
-  int quantidadeMasculino = 0, quantidadeFeminino  = 0, porcentagemMulheres;
+  int quantidadeDigitado = -1, quantidadeMasculino = 0, quantidadeFeminino  = 0, porcentagemMulheres = 0;
 
   do {
     printf("============================================================");
@@ -22,7 +22,25 @@ int main (void) {
     }
 
     system("clear");
+
+    quantidadeDigitado += 1;
   } while (sexo != 10);
+
+  porcentagemMulheres = quantidadeFeminino * 100 / quantidadeDigitado;
+
+  printf("============================================================");
+  printf("\n                        RESULTADO                        ");
+  printf("\n============================================================\n\n");
+
+  printf("Total de mulheres: %d \n", quantidadeFeminino);
+  printf("Total de homens: %d \n", quantidadeMasculino);
+  printf("Total digitado: %d \n\n", quantidadeDigitado);
+
+  if (porcentagemMulheres > 10) {
+    printf("Aviso: total de mulheres corresponde a %d", porcentagemMulheres);
+    printf("%%");
+    printf(" do total digitado.\n\n");
+  }
 
   return 0;
 }
